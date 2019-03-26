@@ -45,11 +45,13 @@ def create_app():
     from project.api.v1.auth import auth_blueprint
     from project.api.v1.users import users_blueprint
     from project.api.v1.devices import devices_blueprint
+    #from project.api.v1.vehicles import vehicles_blueprint
     from project.api.v1.phone_validation import phone_validation_blueprint
     from project.api.v1.email_validation import email_validation_blueprint
     app.register_blueprint(auth_blueprint, url_prefix='/v1')
     app.register_blueprint(users_blueprint, url_prefix='/v1')
     app.register_blueprint(devices_blueprint, url_prefix='/v1')
+    #app.register_blueprint(vehicles_blueprint, url_prefix='/v1')
     app.register_blueprint(phone_validation_blueprint, url_prefix='/v1')
     app.register_blueprint(email_validation_blueprint, url_prefix='/v1')
 
